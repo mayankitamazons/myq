@@ -1,0 +1,21 @@
+{ 
+    "_id" : ObjectId("5b542edce1d9ef32506cd02d"), 
+    "r_via" : NumberInt(1), 
+    "show_ads" : "y", 
+    "name" : "mayank", 
+    "email" : "click4mayank@gmail.com", 
+    "mobile" : 9001025477.0, 
+    "token" : "EAACEdEose0cBAAh1Rf1KKkmWPeqLXs6Enj0McPv5dv4tkVISsUr6ZCZC5TqAaIYPz7BsgxOmVG9xRkXLwEaPB2db0K4i9VfZC8qmSTbsZC30S6YUd0fZCCJWiUlexZBUL90Fm3JP6PrC86SYZCebOQuKX4mqPCUXerKoRVF9IgMj9V73pZCf57ZCY8aefAfjWozAZD", 
+    "s_id" : "1103820809672247", 
+    "s_type" : "m", 
+    "fcm_id" : "emWGEIA7FU4:APA91bEjw_w50k1lifGtgAV-B-HM2MLBBg8fhg0RWuq4usabUt3dHm0cal6rzybFyVgeSgs5KxazBc_hQ9zH197hF4K-Q5hQtvYtHALiwbQMC0UrX5kECUmgSb93hnZG2ucCkcBUhCoG", 
+    "coin" : NumberInt(10), 
+    "d_id" : "aa8bf1f58ec7e68f", 
+    "app_ver" : "1", 
+    "status" : "a", 
+    "r_code" : "MAYA3264", 
+    "pic" : "", 
+    "user_id" : NumberInt(1), 
+    "time" : ISODate("2018-07-22T07:17:27.214+0000"), 
+    "__v" : NumberInt(0)
+}

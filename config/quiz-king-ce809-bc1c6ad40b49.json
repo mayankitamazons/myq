@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "quiz-king-ce809",
+  "private_key_id": "bc1c6ad40b49f89a7f001666a6527f2f49743dad",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC5RgecfgNiYRkM\nNLSMy5XHAnY/vgkv3y86WNcPivrWVa/n0s4QmQwz2c9j1B0C/hs2txTnxgAjSdgA\nbZ4TqoV2LweCOfnFY3SlXCY8rH+SfWnil6UTjWkUv02rNO5EJTLrHiBpoEht1p9u\n6OlvMP2hYV055D1m45J30KG6TF4LsMAv8gsqJEzHz5HRaHjkLbBgZ4ODBUJm/7VI\ncOKexEc2MFFxQEM9yy866BKviRDN80Vb8vn61xBwPvRh5jE1iFPBYo2UNE0hg7Za\nqpVaWnjUxnktEu5PDdD+wzU9UGEQaOpe8Ym1ciiQsxcI0w5sYfHDP8cTGz4E9R8e\nzxrZxGKxAgMBAAECggEAEusXs98aMV2A1UI8fXP8Y0nZEUEyZvT/OZIAw9GJM4Gk\naKOZ7w/xswm2p5btL3ULClc/hzssoG3V5JVM4u0ym5LJzX5mBsXVD12NefyTOj4c\nJcseTBTQehHeuHC7M7IotOFqpd58Bts3hHe7/mKeQ3BRuKuZqXvrZNik6wUJRWAm\nC38XdPux9weSk7cgKeFMfgpmThJY95pyHe80P3mdOU4Wdf5L5g+Y9cGU1Xa2rroT\n2i5xdeCVPpXj3QMjLrk2nOjc/fLrSAvEtCYdyJRmHdCQ8az3ghkZ5No7nKeBE9Rg\nTGsAJ5CS6NDpcDVezWTvlYiTLnhuxu186tOCC7ycUQKBgQD8HcsHBRZ3e7fxnuHp\n4zbzv/nvSc2aaWQ3F3TJ7WwQnyHPoM9M6eCsb5gqSH8bqHLd0+MwHKevKZjjwsKb\nNDba508QNmgqHa1kj4T92+hqNLycTxonu9AqN7DHUxaLGgfJThO3VIb2MnfPnMFR\n8sOKDfttW9GtYheqj6RqDbElowKBgQC8IKVL6FaOpsYBZDEGoDM9zLFaXU4In60t\nYg2cL6qp2reZ/PDQNmca/u9oNaGX5zGne7t9MYCDblBH5z+74e8u3Nm6nocUDws8\nOJmorpAZQHPMj7TKSItinBGlgNR4pYevV72qfuHrxfwmLJy3A3+cZ642QI9LMLP+\nQ48wv+KTmwKBgQDuu5+HFDBEECkMaTDvcrKUedNH3ZENiILXECUNGP9ddfJkU5g4\n8rZHUpy6XU/PduDeYUgeROQcH72g3sm8geL3wlTBu2NDjjqkoKqEYHpiJ3H6aYUQ\n3u2tLHL/LBSKv6lj28UbsrTh6MQ/GeaNnN3AmqDc2zdfgSV74u0DZ9e5FQKBgQCX\nan8gVWQ1dK2xuP5soswbVYD5hlekQUCVYnIp34OxKkTUP+1i6CacZ8wxR9lD9eTV\nNJV28jzJjCQ5ezqk8fgc88yak7WMw377fWLPjZCVgnaxkoiktzbYq1zYpJRednx6\n+FfDvlP//F4yK34HH126eQiSyeuLTSvR3naFeivXOQKBgEIQBsfTpHXbBbC9V9hb\nzrT0D2rtQTHwv5gpCPPczJNGdVwJlD1t6or5XYHyDyZ5cFv3bOLI8OnjnB/1Xjtq\nQD2a076kJQvhDqyh8v/dj1T2tlMXFSbceaTUgkzHMnVhL1zZgbuyEJAJC0hX7ML5\n2yr8QeGWPj+EFVNzNCU4wCef\n-----END PRIVATE KEY-----\n",
+  "client_email": "quiz-king-ce809@appspot.gserviceaccount.com",
+  "client_id": "116903972732522712597",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/quiz-king-ce809%40appspot.gserviceaccount.com"
+}

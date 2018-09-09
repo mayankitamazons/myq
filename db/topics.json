@@ -1,0 +1,1490 @@
+{ 
+    "_id" : "15333637807521", 
+    "t_name" : "WORLD", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLD.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336378062fd", 
+    "t_name" : "SPORTS", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SPORTS.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333637802530", 
+    "t_name" : " BASIC GENERAL KNOWLEDGE ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ BASICGENERALKNOWLEDGE .png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780012a", 
+    "t_name" : "BASIC GENERAL KNOWLEDGE ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BASICGENERALKNOWLEDGE .png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780a79b", 
+    "t_name" : "WORLD GEOGRAPHY", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDGEOGRAPHY.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780a31c", 
+    "t_name" : "", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780cad8", 
+    "t_name" : "COMPUTER", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COMPUTER.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336378039d6", 
+    "t_name" : "HONOURS AND AWARDS", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/HONOURSANDAWARDS.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780bb23", 
+    "t_name" : "ALPHABET SERIES ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ALPHABETSERIES .png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780a568", 
+    "t_name" : "WORLD ORGANISATIONS", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDORGANISATIONS.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780e716", 
+    "t_name" : "FOOD", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FOOD.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780ef99", 
+    "t_name" : "ELECTONICS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ELECTONICSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333637800ca5", 
+    "t_name" : "WORLD QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780b6ec", 
+    "t_name" : "MOVIE", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/MOVIE.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780b95c", 
+    "t_name" : "LOGO", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/LOGO.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780de81", 
+    "t_name" : "INDIA", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIA.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336378098e9", 
+    "t_name" : "CHEMISTRY", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CHEMISTRY.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780d42e", 
+    "t_name" : "NUMBER SERIES", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/NUMBERSERIES.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333637801a2a", 
+    "t_name" : "FAMOUS PERSONALITIES", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FAMOUSPERSONALITIES.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780764a", 
+    "t_name" : "TECHNOLOGY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/TECHNOLOGYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333637805a6b", 
+    "t_name" : "COMPUTRER QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COMPUTRERQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333637806f0c", 
+    "t_name" : "BIRDS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BIRDSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780e323", 
+    "t_name" : "ANIMALS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ANIMALSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780fdae", 
+    "t_name" : "MOVIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/MOVIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780b800", 
+    "t_name" : "BOLLYWOOD QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BOLLYWOODQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333637804b83", 
+    "t_name" : "RAMAYANA QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/RAMAYANAQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780d257", 
+    "t_name" : "INVENTIONS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INVENTIONSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780f183", 
+    "t_name" : "BOOKS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BOOKSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780bac8", 
+    "t_name" : "G.K. QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/G.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780ba9e", 
+    "t_name" : "BOOK QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BOOKQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780872e", 
+    "t_name" : "PLAY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PLAYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363780c734", 
+    "t_name" : "FAMOUS PERSONALITIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FAMOUSPERSONALITIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638408678", 
+    "t_name" : "SPORTS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SPORTSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638409541", 
+    "t_name" : "PRIZE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PRIZEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336384014e2", 
+    "t_name" : "FOOD SCIENCE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FOODSCIENCEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363840185d", 
+    "t_name" : "IPL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/IPLQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363840dbe4", 
+    "t_name" : "CRICKET QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CRICKETQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638409b01", 
+    "t_name" : "FORMULA F1 RACE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FORMULAF1RACEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363840e491", 
+    "t_name" : "OLYMPIC GAMES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/OLYMPICGAMESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638409abd", 
+    "t_name" : "BIOLOGY SCIENCE  QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BIOLOGYSCIENCEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638403974", 
+    "t_name" : "SCIENCE  QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SCIENCEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638407454", 
+    "t_name" : "HOLLYWOOD QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/HOLLYWOODQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333638407979", 
+    "t_name" : "OSCAR QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/OSCARQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363840e04b", 
+    "t_name" : "IT LOGO QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ITLOGOQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363840e184", 
+    "t_name" : "LOGO QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/LOGOQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363840eb8d", 
+    "t_name" : "FOOD QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FOODQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363900d90d", 
+    "t_name" : "MOVIE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/MOVIEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336390032d3", 
+    "t_name" : "FOOD & DRINK QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FOOD&DRINKQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336390019b6", 
+    "t_name" : "G.K.QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/G.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333639005202", 
+    "t_name" : "ACTIVE/PASSIVE VOICE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ACTIVE/PASSIVEVOICEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363900dcd0", 
+    "t_name" : "ENGLISH GRAMER QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ENGLISHGRAMERQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333639009752", 
+    "t_name" : "DIGITAL ELECTRONICS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/DIGITALELECTRONICSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333639009ab1", 
+    "t_name" : "COMPUTER ARCHITECTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COMPUTERARCHITECTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363900ee06", 
+    "t_name" : "INDIAN ART AND CULTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIANARTANDCULTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363900cc9a", 
+    "t_name" : "IDENTIFY THE ERRORS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/IDENTIFYTHEERRORSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363900842a", 
+    "t_name" : "GENERAL ENGLISH QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/GENERALENGLISHQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363900a8b6", 
+    "t_name" : "CURRENT GK QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CURRENTGKQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336396036d6", 
+    "t_name" : "PARTS OF AN AUTOMOBILE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PARTSOFANAUTOMOBILEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960b913", 
+    "t_name" : "CAR QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CARQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333639608d37", 
+    "t_name" : "INDIAN HISTORY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIANHISTORYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960f5b9", 
+    "t_name" : "INDIA QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIAQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333639603435", 
+    "t_name" : "ATHLETICS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ATHLETICSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960b218", 
+    "t_name" : "GADGET QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/GADGETQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336396002d6", 
+    "t_name" : "TECH QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/TECHQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960252c", 
+    "t_name" : "JURASSIC PARK QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/JURASSICPARKQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960b882", 
+    "t_name" : "GEOGRAPHY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/GEOGRAPHYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960a8fa", 
+    "t_name" : "TECHNICAL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/TECHNICALQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960e580", 
+    "t_name" : "JAVA QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/JAVAQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533363960f97f", 
+    "t_name" : "MARKETING AND BUSINESS APTITUDE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/MARKETINGANDBUSINESSAPTITUDEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364020db53", 
+    "t_name" : "COMPUTER QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COMPUTERQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640203195", 
+    "t_name" : "CAPITAL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CAPITALQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640207858", 
+    "t_name" : "ART-AND-CULTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ART-AND-CULTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640203552", 
+    "t_name" : "MISCELLANEOUS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/MISCELLANEOUSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640200570", 
+    "t_name" : "REASONING ABILITYQUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/REASONINGABILITYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364020215e", 
+    "t_name" : "IO QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/IOQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364020a013", 
+    "t_name" : "INTELLEGENT TEST QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INTELLEGENTTESTQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640200adc", 
+    "t_name" : "ANDROID APP QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ANDROIDAPPQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336402042bb", 
+    "t_name" : "PHYSICS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PHYSICSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336408048d1", 
+    "t_name" : "INDIAN-CONSTITUTION QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIAN-CONSTITUTIONQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364080932e", 
+    "t_name" : "FRUIT AND VEGETABLES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FRUITANDVEGETABLESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364080effa", 
+    "t_name" : "FAMOUS BOOK TITLE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FAMOUSBOOKTITLEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640807a7a", 
+    "t_name" : "WORLD-WAR-1 QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLD-WAR-1QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333640809bea", 
+    "t_name" : "IMPORTANT DAYS AND YEARS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/IMPORTANTDAYSANDYEARSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364080d01c", 
+    "t_name" : "PRO KABDII QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PROKABDIIQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364140bb40", 
+    "t_name" : "INDIA GENERAL - GENERAL KNOWLEDGE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIAGENERAL-GENERALKNOWLEDGEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333641405ec2", 
+    "t_name" : "ELECTRICITY IN INDIA  QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ELECTRICITYININDIAQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333641405e86", 
+    "t_name" : "WORLD GEOGRAPHY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDGEOGRAPHYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364140f649", 
+    "t_name" : "AGRICULTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/AGRICULTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333641404cbc", 
+    "t_name" : "MUSIC QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/MUSICQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364140a6f8", 
+    "t_name" : "COUNTRIES & THEIR CURRENCIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COUNTRIES&THEIRCURRENCIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364140683d", 
+    "t_name" : "ANDROID QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ANDROIDQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333641407308", 
+    "t_name" : "RAJASTHAN G.K. QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/RAJASTHANG.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336414083ec", 
+    "t_name" : "INDIA G.K. QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIAG.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364200012d", 
+    "t_name" : "ODD WORDS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ODDWORDSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364200a820", 
+    "t_name" : "CALENDAR APTITUDE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CALENDARAPTITUDEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364200895f", 
+    "t_name" : "DAY & DATE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/DAY&DATEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364200d883", 
+    "t_name" : "TIME AND DISTANCE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/TIMEANDDISTANCEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364200cab2", 
+    "t_name" : "HUMAN BODY SYSTEMS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/HUMANBODYSYSTEMSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333642609fa0", 
+    "t_name" : "FILMY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FILMYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364320b807", 
+    "t_name" : "INDIAN G.K. QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIANG.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364380c735", 
+    "t_name" : "PICTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PICTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364380d090", 
+    "t_name" : "PHYSICAL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/PHYSICALQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440832a", 
+    "t_name" : "ANIMAL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ANIMALQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440d23b", 
+    "t_name" : "DOG QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/DOGQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336444030e6", 
+    "t_name" : "SCIENCE AND TECHNOLOGY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SCIENCEANDTECHNOLOGYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440864b", 
+    "t_name" : "SPORT QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SPORTQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440debd", 
+    "t_name" : "GRAMMARTEST QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/GRAMMARTESTQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440e8c6", 
+    "t_name" : "FOOTBALL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FOOTBALLQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440f90b", 
+    "t_name" : "WORLD CUP FOOTBALL QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDCUPFOOTBALLQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336444049f1", 
+    "t_name" : "ANIMALS AND BIRDS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ANIMALSANDBIRDSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364440a102", 
+    "t_name" : "BRITISH HISTORY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BRITISHHISTORYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336450054bc", 
+    "t_name" : "RIVERS - ANCIENT NAMES", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/RIVERS-ANCIENTNAMES.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336450017c5", 
+    "t_name" : "DISPUTES  QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/DISPUTESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364500877c", 
+    "t_name" : "RIVERS - ORIGINS AND TRIBUTARIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/RIVERS-ORIGINSANDTRIBUTARIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336450093da", 
+    "t_name" : "COMPANIES", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COMPANIES.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364500d346", 
+    "t_name" : "BRANDS AND PERSONS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BRANDSANDPERSONSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336450075c8", 
+    "t_name" : "COMPANIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COMPANIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364500ac96", 
+    "t_name" : "RIVERS OF THE WORLD QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/RIVERSOFTHEWORLDQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336450025cd", 
+    "t_name" : "AFRICAN COUNTRIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/AFRICANCOUNTRIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333645005331", 
+    "t_name" : "ART AND CULTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ARTANDCULTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336450043f0", 
+    "t_name" : "AWARDS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/AWARDSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364560f2f7", 
+    "t_name" : "ATOMIC STRUCTURE QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ATOMICSTRUCTUREQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336456017c7", 
+    "t_name" : "BUDDHISM QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BUDDHISMQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364560f414", 
+    "t_name" : "CHEMICALS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CHEMICALSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364560dea0", 
+    "t_name" : "CIRCULATORY SYSTEM QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CIRCULATORYSYSTEMQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336456079e4", 
+    "t_name" : "INTERNATIONAL ORGANISATIONS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INTERNATIONALORGANISATIONSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333645609bad", 
+    "t_name" : "UNO QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/UNOQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333645603c29", 
+    "t_name" : "FLOWERS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FLOWERSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364560c467", 
+    "t_name" : "OCEANS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/OCEANSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336456027b2", 
+    "t_name" : "SEAS AND WATER BODIES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SEASANDWATERBODIESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364560338f", 
+    "t_name" : "FREEDOM FIGHTERS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FREEDOMFIGHTERSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364560b013", 
+    "t_name" : "CURRENT AFFER QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/CURRENTAFFERQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336462053c1", 
+    "t_name" : "WORLD HISTORY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDHISTORYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333646209bc5", 
+    "t_name" : "WORLD G.K.QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDG.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333646801cfd", 
+    "t_name" : "COUNTRIES-AND-LANGUAGE  QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/COUNTRIES-AND-LANGUAGEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333646800dfc", 
+    "t_name" : "WORLD LONGEST & HIGHEST & LARGEST & DEEPEST QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDLONGEST&HIGHEST&LARGEST&DEEPESTQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364680f343", 
+    "t_name" : "WORLD G.K. QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/WORLDG.K.QUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364680fa49", 
+    "t_name" : "SCIENTIFIC NAME QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/SCIENTIFICNAMEQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333646800c42", 
+    "t_name" : "INDIA LONGEST & HIGHEST & LARGEST & DEEPEST QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/INDIALONGEST&HIGHEST&LARGEST&DEEPESTQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364740bf02", 
+    "t_name" : "TOURISM QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/TOURISMQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364740f231", 
+    "t_name" : "TAGLINE/SLOGAN QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/TAGLINE/SLOGANQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336474010ee", 
+    "t_name" : "ANIMAL WORLD QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/ANIMALWORLDQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364740000c", 
+    "t_name" : "AUTHOR AND BOOKS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/AUTHORANDBOOKSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364860cb8c", 
+    "t_name" : "NICKNAMES OF PLACES AND RIVERS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/NICKNAMESOFPLACESANDRIVERSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364860a314", 
+    "t_name" : "IMPORTANT BUSINESS TAGLINES QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/IMPORTANTBUSINESSTAGLINESQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364920f3ac", 
+    "t_name" : "BIOLOGY QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/BIOLOGYQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "1533364920a7b9", 
+    "t_name" : "FIRST IN INDIAN CINEMA QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FIRSTININDIANCINEMAQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "153336498068f2", 
+    "t_name" : "IMPORTANT ABBREVIATIONS QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/IMPORTANTABBREVIATIONSQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}
+{ 
+    "_id" : "15333649809e6d", 
+    "t_name" : "FULL FORM QUIZ", 
+    "img" : "https://s3.ap-south-1.amazonaws.com/quizking/FULLFORMQUIZ.png", 
+    "cat_id" : [
+        {
+            "cat_id" : "5b41ac7bd0031c1574d9f6bf"
+        }
+    ]
+}

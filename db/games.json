@@ -1,0 +1,161 @@
+{ 
+    "_id" : NumberInt(1), 
+    "g_status" : "pr", 
+    "g_name" : "Demo Free Game", 
+    "g_fee" : NumberInt(10), 
+    "creator_id" : "5b474e7732dfb93270b63771", 
+    "time" : ISODate("2018-07-12T09:30:00.000+0000"), 
+    "time_utc" : "1831526400", 
+    "g_type" : "f", 
+    "game_code" : "may912", 
+    "topics" : [
+        {
+            "_id" : ObjectId("5b4b23ab7822b124a856765a"), 
+            "t_id" : "1531649448460", 
+            "t_name" : "Computer Science", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/computer.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b23ab7822b124a8567659"), 
+            "t_id" : "5b482909bdb32321fe5b6266", 
+            "t_name" : "World", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/global.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b23ab7822b124a8567658"), 
+            "t_id" : "5b484dcdaa5f8f2b20605dd4", 
+            "t_name" : "Basic Math", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/math.png"
+        }
+    ], 
+    "created" : ISODate("2018-07-15T10:36:27.418+0000"), 
+    "player" : [
+
+    ], 
+    "question" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(2), 
+    "g_status" : "pr", 
+    "g_name" : "Demo Free Game", 
+    "g_fee" : NumberInt(10), 
+    "creator_id" : "5b474e7732dfb93270b63771", 
+    "time" : ISODate("2018-07-12T09:30:00.000+0000"), 
+    "time_utc" : "1831526400", 
+    "g_type" : "f", 
+    "game_code" : "may2663", 
+    "topics" : [
+        {
+            "_id" : ObjectId("5b4b25e2f77b3d1d849c91b5"), 
+            "t_id" : "1531649448460", 
+            "t_name" : "Computer Science", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/computer.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b25e2f77b3d1d849c91b4"), 
+            "t_id" : "5b482909bdb32321fe5b6266", 
+            "t_name" : "World", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/global.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b25e2f77b3d1d849c91b3"), 
+            "t_id" : "5b484dcdaa5f8f2b20605dd4", 
+            "t_name" : "Basic Math", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/math.png"
+        }
+    ], 
+    "created" : ISODate("2018-07-15T10:45:54.464+0000"), 
+    "player" : [
+        {
+            "_id" : ObjectId("5b4b2ff595a8b91d0c6783ea"), 
+            "user_id" : "5b474e7732dfb93270b63771", 
+            "join_time" : ISODate("2018-07-15T11:28:53.348+0000")
+        }
+    ], 
+    "question" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(3), 
+    "g_status" : "pr", 
+    "g_name" : "Demo Free Game", 
+    "g_fee" : NumberInt(10), 
+    "creator_id" : "5b474e7732dfb93270b63771", 
+    "time" : ISODate("2018-07-12T09:30:00.000+0000"), 
+    "time_utc" : "1831526400", 
+    "g_type" : "f", 
+    "game_code" : "may1239", 
+    "topics" : [
+        {
+            "_id" : ObjectId("5b4b293acd3c222e78ffe946"), 
+            "t_id" : "1531649448460", 
+            "t_name" : "Computer Science", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/computer.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b293acd3c222e78ffe945"), 
+            "t_id" : "5b482909bdb32321fe5b6266", 
+            "t_name" : "World", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/global.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b293acd3c222e78ffe944"), 
+            "t_id" : "5b484dcdaa5f8f2b20605dd4", 
+            "t_name" : "Basic Math", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/math.png"
+        }
+    ], 
+    "created" : ISODate("2018-07-15T11:00:10.938+0000"), 
+    "player" : [
+
+    ], 
+    "question" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : NumberInt(4), 
+    "g_status" : "p", 
+    "g_name" : "Demo Paid Game", 
+    "g_fee" : NumberInt(100), 
+    "g_prize" : NumberInt(70), 
+    "creator_id" : "5b474e7732dfb93270b63771", 
+    "time" : ISODate("2018-07-18T09:30:00.000+0000"), 
+    "time_utc" : "1531785600", 
+    "g_type" : "p", 
+    "game_code" : "may7601", 
+    "topics" : [
+        {
+            "_id" : ObjectId("5b4b6d4689eaeb3e08f601ee"), 
+            "t_id" : "1531649448460", 
+            "t_name" : "Computer Science", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/computer.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b6d4689eaeb3e08f601ed"), 
+            "t_id" : "5b482909bdb32321fe5b6266", 
+            "t_name" : "World", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/global.png"
+        }, 
+        {
+            "_id" : ObjectId("5b4b6d4689eaeb3e08f601ec"), 
+            "t_id" : "5b484dcdaa5f8f2b20605dd4", 
+            "t_name" : "Basic Math", 
+            "t_img" : "https://s3.ap-south-1.amazonaws.com/quizking/math.png"
+        }
+    ], 
+    "created" : ISODate("2018-07-15T15:50:30.457+0000"), 
+    "player" : [
+
+    ], 
+    "question" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
