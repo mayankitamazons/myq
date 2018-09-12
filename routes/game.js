@@ -239,6 +239,7 @@ router.post('/topicdetail',function(req,res,next){
 // game detail api
 router.post('/gamedetail',function(req,res,next){
   var game_id=parseInt(req.body.data.game_id);
+  var user_id=parseInt(req.body.data.user_id);
   if (game_id) {
   	var current_utc=Math.floor(new Date()/ 1000);
     //console.log(current_utc);
@@ -252,14 +253,14 @@ router.post('/gamedetail',function(req,res,next){
 
    },
 
-   { $match: {_id:game_id} }, { $project: {game_code:1,g_status:1,g_name:1,g_fee:1,time:1,time_utc:1,g_type:1,g_code:1,
+   { $match: {_id:game_id} }, { $project: {creator_id:1,game_code:1,g_status:1,g_name:1,g_fee:1,time:1,time_utc:1,g_type:1,g_code:1,
         g_prize:1,question:1,topics:{_id:1,t_name:-1,img:1},player:{user_id:-1,name:-1,pic:-1},user:{name:1,pic:1}} }]).limit(1).then(function(gamedata){
         //  console.log(gamedata);
        if (gamedata) {
 
 
                 var question_list=gamedata[0].question;
-                // console.log(question_list);
+                 
                   var questiondata=[];
                 if(question_list) {
 
@@ -267,15 +268,23 @@ router.post('/gamedetail',function(req,res,next){
                      question_list.forEach(function(qes) {
                         q_array.push(qes._id);
                      });
-                      // console.log(q_array);
-
-                     QuestionModel.find({_id:{$in:q_array}}).then(function(questiondata){
-
-                        //  gamedata[0].question=questiondata;
+                  QuestionModel.aggregate([
+     { $match: {"_id":{$in:q_array}} },
+  ]).limit(10).then(function(questiondata){      
+					  // console.log(questiondata);
+						
+                        //  gamedata[0].question=questiondata;   
                         var record=gamedata[0];
-
+						var creator_id=record.creator_id;
+						
+					
+						var player_list=record.player;
                         record.question=questiondata;
-                         res.send({"status":true,"code":200,"message":"Game detail","data":record});
+						 extrafunction.playercheck(player_list,user_id,creator_id,function(s_status){
+							 record.self_status=s_status;
+							 res.send({"status":true,"code":200,"message":"Game detail","data":record});
+						 });   
+                         
 
                      });
                 }
@@ -297,7 +306,7 @@ router.post('/gamedetail',function(req,res,next){
     res.send({"status":false,"code":404,"message":"Required Paramter Missing"});
   }
 });
-router.post('/joingame',function(req,res,next){
+router.post('/joingameold',function(req,res,next){
   var f_id="f0T11POKM3g:APA91bFbXx5-zNX4Ij-iBnuQkHj14XT1kQnx-IrREt96uRFQVVEdOm3mJFz4PqZlvm-oyDLPW9efA8qhYfSmQfqMp1Ly-8ux6G8j98_cU6HCSJ_KtLf2UpBXJ-GoK3xCek8P2h6k4XwNr2AcWZu1pVS9kZMlvHVlww";
   p_title="Hey join your game";
   var playermsg={
@@ -310,7 +319,7 @@ router.post('/joingame',function(req,res,next){
      });
 });
 // invitation status of game
-router.post('/joingame2',function(req,res,next){
+router.post('/joingame',function(req,res,next){  
   var data=req.body.data;
   var game_id=parseInt(req.body.data.game_id);
     var user_id=parseInt(req.body.data.user_id);
@@ -395,7 +404,7 @@ router.post('/joingame2',function(req,res,next){
                                                                              body:''
 
                                                                            };
-                                                                         extrafunction.sendpush(playermsg,creator_fcm_id, function(pushresult){
+                                                                         extrafunction.sendpush(playermsg,playermsg,creator_fcm_id, function(pushresult){
 
                                                                             });
                                                                        }
@@ -444,7 +453,8 @@ router.post('/joingame2',function(req,res,next){
                                                          body:''
 
                                                        };
-                                                     extrafunction.sendpush(playermsg,creator_fcm_id, function(pushresult){
+													
+                                                     extrafunction.sendpush(playermsg,playermsg,creator_fcm_id, function(pushresult){
 
                                                         });
                                                    }
@@ -472,13 +482,13 @@ router.post('/joingame2',function(req,res,next){
 });
 
 // 90 sec before start of game send notification to player of game & assing question to game
-router.post('/gamestartbefore',function(req,res,next){
+router.get('/gamestartbefore',function(req,res,next){
   // select all games whose time lies b/w selected time slot
   var add_minutes =  function (dt, minutes) {
     return new Date(dt.getTime() + minutes*60000);
   }
   var current_utc=Math.floor(new Date()/ 1000);
-  var timeafter10=add_minutes(new Date(),10000000);
+  var timeafter10=add_minutes(new Date(),30);  
   var utc10=Math.floor(timeafter10/1000);
   Game.find({time_utc: {$gte: current_utc, $lt: utc10},send_push:"n"} ).sort({time_utc:1}).populate('pl').then(function(gamedata){
     //  console.log(gamedata);
@@ -513,6 +523,11 @@ router.post('/gamestartbefore',function(req,res,next){
                                 {
                                   var msg={
                                            title: 'Invite Friends to play game',
+                                           body: 'You know if you invite more friend winning value will be more'
+                                          
+                                         };
+									var msgdata={
+                                           title: 'Invite Friends to play game',
                                            body: 'You know if you invite more friend winning value will be more',
                                            game_id:game_id,
                                            type:"opengame"
@@ -532,6 +547,12 @@ router.post('/gamestartbefore',function(req,res,next){
                                           type:"opengame"
 
                                         };
+										var msgdata={
+                                            title: 'Lets ready to play',
+                                          body:bodymsg,
+                                          game_id:game_id,
+                                          type:"opengame"
+                                         };
 
                                       player_data.forEach(function(singleplayer) {
 
@@ -540,23 +561,28 @@ router.post('/gamestartbefore',function(req,res,next){
                                       User.find({user_id:{$in:player_array},fcm_id:{"$nin":[ null,""]}}).select({user_id:-1,fcm_id:-1}).then(function(userdata){
                                       var player_fcm_id=userdata.fcm_id;
 
-                                        extrafunction.sendpush(playermsg,player_fcm_id, function(pushresult){
+                                        extrafunction.sendpush(playermsg,msgdata,player_fcm_id, function(pushresult){
                                              console.log(pushresult);
                                            });
                                       });
 
                                      var msg={
                                          title: 'Add more play to game via inviting',
+                                         body: 'You know if you invite more friend winning value will be more'
+                                         
+                                       };
+									   var msgdata={
+                                            title: 'Add more play to game via inviting',
                                          body: 'You know if you invite more friend winning value will be more',
                                          game_id:game_id,
                                          type:"opengame"
-                                       };
+                                         };
 
 
 
 
                                     }
-                                    extrafunction.sendpush(msg,creator_fcm_id, function(pushresult1){
+                                    extrafunction.sendpush(msg,msgdata,creator_fcm_id, function(pushresult1){
                                       console.log(pushresult1);
                                     });
                               }
@@ -583,7 +609,7 @@ router.post('/gamestartbefore',function(req,res,next){
   });
 });
 // send push notificatio before 10 sec start of game
-router.post('/gamestartbefore10sec',function(req,res,next){
+router.get('/gamestartbefore10sec',function(req,res,next){
   // select all games whose time lies b/w selected time slot
   var add_minutes =  function (dt, minutes) {
     return new Date(dt.getTime() + minutes*60000);
@@ -799,6 +825,20 @@ router.post('/feedgame',function(req,res,next){
 
 
 
+});
+router.post('/submitscore',function(req,res,next){
+	var game_id=parseInt(req.body.game_id);
+	var user_id=parseInt(req.body.user_id);
+	  if (game_id && user_id) {
+			var current_utc=Math.floor(new Date()/ 1000); 
+			 res.send({"status":false,"code":200,"message":"Score Sumiited"});
+	  }
+	    else {
+        res.send({"status":false,"code":404,"message":"Required Paramter missing"});
+    }   
+});
+router.post('/gameresult',function(req,res,next){       
+  res.send({"status":false,"code":404,"message":"Result Declare"});
 });
 
 module.exports=router;

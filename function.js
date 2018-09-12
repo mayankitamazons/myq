@@ -1,6 +1,7 @@
 const User=require('./Model/usermodel');
 const question=require('./Model/questionmodel');
 const Game=require('./Model/gamemodel');
+  const QuestionModel=require('./Model/questionmodel');
 var methods = {};
 var result;
 methods.generateRefferalcode = function(user_name,callback) {
@@ -68,43 +69,172 @@ methods.formatAMPM = function(date,callback) {
   minutes = minutes < 10 ? '0'+minutes : minutes;
   var strTime = hours + ':' + minutes + ' ' + ampm;
   callback(strTime);
-});
+};
 // question detail
 methods.questiondetail = function(question_ids) {
 var question_ids=[1,2,3];
   question.find({_id:{$in:question_ids}}).then(function(questiondata){
     callback(questiondata);
 
-  });
+  });   
    //callback(ref_code);
+};  
+methods.gamedetail = function(game_id,user_id,callback) {
+	console.log(game_id);
+	self_stauts=0;
+	 Game. aggregate([{
+      $lookup: {
+         from: "users",
+         localField: "creator_id",    // field in the orders collection
+         foreignField: "user_id",  // field in the items collection
+         as: "user"
+      },
+
+   },
+
+   { $match: {_id:game_id} }, { $project: {game_code:1,g_status:1,g_name:1,g_fee:1,time:1,time_utc:1,g_type:1,g_code:1,
+        g_prize:1,question:1,topics:{_id:1,t_name:-1,img:1},player:{user_id:-1,name:-1,pic:-1},user:{name:1,pic:1}} }]).limit(1).then(function(gamedata){
+			if (gamedata) {
+        
+              
+                var question_list=gamedata[0].question;
+                // console.log(question_list);
+                  var questiondata=[];
+                if(question_list) {     
+
+                     var q_array=[];
+                     question_list.forEach(function(qes) {
+                        q_array.push(qes._id);
+                     });
+                      
+					if(q_array.length>0)
+					{
+						QuestionModel.find({_id:{$in:q_array}}).then(function(questiondata,callback){
+
+                        //  gamedata[0].question=questiondata;
+                        var record=gamedata[0];
+						var player_list=record.player;
+					    
+						 var length = player_list.length;
+						 if(length>0)
+						 {
+							for(var i = 0; i < length; i++) {
+							if(player_list[i].user_id == user_id)
+							   self_stauts=1;
+							} 
+						 }
+						 else
+						 {
+							 var self_stauts=0; 
+						 }
+						 
+						
+						record.self_stauts=self_stauts;
+                        record.question=questiondata;
+                         callback(record);
+
+                     });
+					}
+					else
+					{
+						var record=gamedata[0];
+						var player_list=record.player;
+						 var length = player_list.length;
+						 if(length>0)
+						 {
+							for(var i = 0; i < length; i++) {
+							if(player_list[i].user_id == user_id)
+							   self_stauts=1;
+							} 
+						 }
+						 else
+						 {
+							 var self_stauts=0; 
+						 }
+						 
+						
+						record.self_stauts=self_stauts;
+                        record.question=[];
+                         callback(record);
+					}
+						
+                     
+                }  
+                else {
+					 var record=gamedata[0];
+						var player_list=record.player;
+						 var length = player_list.length;
+						 if(length>0)
+						 {
+							for(var i = 0; i < length; i++) {
+							if(player_list[i].user_id == user_id)
+							   self_stauts=1;
+							} 
+						 }
+						 else
+						 {
+							 var self_stauts=0; 
+						 }
+						 
+						
+						record.self_stauts=self_stauts;
+                        record.question=[];
+                         callback(record);
+                }
+		}
+	    else
+		{
+			callback(false);
+		}
+		});
+};
+// check user as player eixt or not     
+methods.playercheck = function(player_list,user_id,creator_id,callback) { 
+	  var length = player_list.length;
+	 
+	  if(creator_id==user_id)
+	  {
+		  var self_stauts=1;
+	  }
+	  else
+	  {
+		   var self_stauts=0;
+	  }
+	  
+ 
+    for(var i = 0; i < length; i++) {
+        if(player_list[i].user_id == user_id)
+           self_stauts=1;
+    }
+   
+	callback(self_stauts);   
 };
 // send push  notification
-methods.sendpush = function(msg,register_ids,callback) {
+methods.sendpush = function(msg,msgdata,register_ids,callback) {
   var admin = require('firebase-admin');
 
 var serviceAccount = require('./config/quiz-king-ce809-bc1c6ad40b49.json');
-
+try {
 admin.initializeApp({
 credential: admin.credential.cert(serviceAccount),
 databaseURL: 'https://quiz-king-ce809.firebaseio.com/'
 });
+}
+catch (err) {
+   console.error('Firebase initialization error', err.stack)
+}
 // This registration token comes from the client FCM SDKs.
 var registrationToken = register_ids;
-
+var msgdata = JSON.stringify(msgdata);
+var msgd={"title":msg.title,"body":msg.body,data:msgdata};
 // See documentation on defining a message payload.
 var message = {
-  data:msg,
-  ttl:date('Y-m-d G:i:s'),
+  data:msgd,
   android: {
    ttl: 3600 * 1000, // 1 hour in milliseconds
    priority: 'normal',
-   notification: {
-     title: '$GOOG up 1.43% on the day',
-     body: '$GOOG gained 11.80 points to close at 835.67, up 1.43% on the day.',
-     icon: 'stock_ticker_update',
-     color: '#f45342'
-   }
- },
+   notification:msg
+ },  
   notification:msg,
   token: registrationToken
 };

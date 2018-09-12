@@ -14,7 +14,7 @@ app.use(morgan('combined'))
 //var site_url="http://localhost:4001/uploads/topic/";
 // connect to mongodb database
 // live server
-mongoose.connect('mongodb://13.127.103.149:27017/quizking');
+mongoose.connect('mongodb://13.127.202.118:27017/qking', { useNewUrlParser: true });
 //mongoose.connect('mongodb://localhost:27017/quizking');
 mongoose.Promise=global.Promise;
 // use body parse  before request type

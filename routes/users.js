@@ -245,6 +245,9 @@ var app_ver=req.body.data.app_ver;
     if (req.body.data.user_id) {
       var is_force="n";
       var live_ver=1;
+	    var game_start_utc=game_end_utc='';
+	  var ngame={};
+    var user_id=req.body.data.user_id;
       User.findOne({user_id:req.body.data.user_id}).select({_id:-1,coin:-1,app_ver:-1}).then(function(userdata){
           if(is_force=="y" && live_ver>app_ver)
           {
@@ -276,9 +279,55 @@ var app_ver=req.body.data.app_ver;
 
    { $match: {time_utc: {$gte: current_utc}} }, { $project: {game_code:1,g_status:1,g_name:1,g_fee:1,time:1,time_utc:1,g_type:1,g_code:1,
         g_prize:1,topics:{_id:1,t_name:-1,img:1},player:{user_id:1},user:{name:1,pic:1}} }]).sort({time_utc:1}).then(function(gamedata){
-      //  console.log(gamedata);
+      
        if (gamedata) {
-           res.send({"status":true,"code":code,"message":message,"topic":topicdata,"game":gamedata,"coin":userdata.coin,"mart":mart});
+			   Game. aggregate([
+			   { $match:{time_utc: {$gte: current_utc}}},
+			    { $unwind: '$player'},
+				{$match:{'player.user_id':user_id}},
+				{$project :{_id:1}}
+			   ]).then(function(ngame){
+				   if(ngame)
+				   {
+					   
+					  
+					    if(ngame.length>0)
+						{   
+							
+							 var n_game_id=ngame[0]._id;
+							 var n_game_time=ngame[0].time_utc;
+							  var add_second =  function (dt, sec) {
+									return new Date(dt.getTime() + sec);
+								  }
+								  var current_utc=Math.floor(new Date()/ 1000);
+								  var timeafter100sec=add_second(new Date(),100);
+								  var utc_100=Math.floor(timeafter100sec/1000);
+							 if(n_game_time>current_utc && n_game_time<=utc_100)
+							 {  
+								extrafunction.gamedetail(n_game_id,user_id, function(ndata){
+								 
+								res.send({"status":true,"code":code,"message":message,"topic":topicdata,"game":gamedata,"coin":userdata.coin,"mart":mart,	"nextgame":ndata});
+								}); 
+							 }
+							 else
+							 {
+								 res.send({"status":true,"code":code,"message":message,"topic":topicdata,"game":gamedata,"coin":userdata.coin,"mart":mart,"nextgame":null}); 
+							 }
+							 	
+						}
+						else
+						{
+							 res.send({"status":true,"code":code,"message":message,"topic":topicdata,"game":gamedata,"coin":userdata.coin,"mart":mart,"nextgame":null});
+						}
+					      							
+				   }
+				   else
+				   {
+					  res.send({"status":true,"code":code,"message":message,"topic":topicdata,"game":gamedata,"coin":userdata.coin,"mart":mart,"nextgame":null});
+				   }
+				    
+			   });
+		  
 
        }else {
            res.send({"status":false,"code":404,"message":"No Public game yet try other"});
