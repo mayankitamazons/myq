@@ -262,8 +262,9 @@ var app_ver=req.body.data.app_ver;
           }
       //  console.log(userdata);
       // topic data
-       var mart=[{"gems_key":"25_coin","text":"25 Coin","sub_text":"A Small Pack","prize":"1 $"},
-              {"gems_key":"50_coin","text":"50 Coin","sub_text":"A Pack to Play","prize":"2 $"}];
+       var mart=[{"gems_key":"10_c","text":"10 Coin","sub_text":"A Small Pack","prize":10},
+	          {"gems_key":"25_c","text":"25 Coin","sub_text":"A Small Pack","prize":25},
+              {"gems_key":"50_c","text":"50 Coin","sub_text":"A Pack to Play","prize":50},{"gems_key":"75_c","text":"75 Coin","sub_text":"A Small Pack","prize":75},{"gems_key":"100_c","text":"100 Coin","sub_text":"A Small Pack","prize":100}];
         Topic.find({is_trendin:'y'}).select({_id:-1,t_name:-1,img:-1}).limit(10).sort( { _id: -1 } ).then(function(topicdata){
           //console.log(topicdata);
           // current utc time
@@ -462,5 +463,13 @@ router.get('/moreapp',function(req,res,next){
         }
     ];
     res.send({"code":200,"status":true,"data":str,"message":"Data listed Successfully"});
+});
+router.post('/inapp',function(req,res,next){   
+ res.send({
+    "status": true,
+    "code": 200,
+    "message": "Inapp Done Successfully",
+    "show_ads": "n"
+}); 
 });
 module.exports=router;

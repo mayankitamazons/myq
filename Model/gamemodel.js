@@ -33,6 +33,7 @@ var GameSchema=new schema({
     // g_Type will be free or paid
     g_type:{type:String,enum: ['f','p']},
     is_featured:{type:String,enum: ['y','n']},
+   
     game_banner:{type:String},
     creator_id:{type:Number,required:true},
     time:{type:Date},
@@ -42,7 +43,8 @@ var GameSchema=new schema({
     player:[PlayerSchema],
     topics:[TopicSchema],
     question:[QuestionSchema],
-    send_push:{type:String,enum: ['y','n'],default:'n'}
+    send_push:{type:String,enum: ['y','n'],default:'n'},
+    winner_assign:{type:String,enum: ['y','n'],default:'n'}
 
 });
 var Game=mongoose.model('game',GameSchema);

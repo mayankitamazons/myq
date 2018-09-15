@@ -9,6 +9,7 @@ const User=require('../Model/usermodel');
 const Game=require('../Model/gamemodel');
 const Topic=require('../Model/topicmodel');
 const QuestionModel=require('../Model/questionmodel');
+const GameScore=require('../Model/scoremodel');
 const router=express.Router();
 var AWS = require('aws-sdk'),
   multer = require('multer');
@@ -66,7 +67,7 @@ router.post('/creategame',function(req,res,next){
          if(g_utc>current_utc)
          {
             // if payed game then check user balance
-                User.findOne({user_id:req.body.data.user_id}).select({user_id:-1,_id:-1,coin:-1,name:-1}).then(function(userdata){
+                User.findOne({user_id:req.body.data.user_id}).select({user_id:-1,_id:-1,coin:-1,name:-1,pic:-1}).then(function(userdata){
                      if(userdata)
                      {
                          var user_name=userdata.name;
@@ -103,7 +104,11 @@ router.post('/creategame',function(req,res,next){
                               else {
                                   var g_prize=0;
                               }
-
+							var gameplayer={
+								user_id:req.body.data.user_id,
+								name:user_name,
+								pic:userdata.pic
+							};
                             var newgame={
                                          _id:countgame,
                                          g_name:g_name,
@@ -115,6 +120,7 @@ router.post('/creategame',function(req,res,next){
                                          time_utc:g_utc,
                                          g_type:req.body.data.g_type,
                                          game_code:game_code,
+										 player:gameplayer,
                                          topics:data.cat_id
                                      };
                                      Game.create(newgame).then(function(newgame){
@@ -126,6 +132,11 @@ router.post('/creategame',function(req,res,next){
 
                                            function(err, result){ });
                                          }
+										 var topic_list=data.cat_id;
+										 var game_id=countgame;
+										   extrafunction.questionassign(topic_list,game_id, function(qresult){
+
+                                  });
                                       res.send({"status":true,"code":200,"message":"New Game Created Successfully","data":newgame,"game_code":game_code,"coin":new_coin});
                                  }).catch(next);
                                });
@@ -752,13 +763,28 @@ router.post('/topicquestion',function(req,res,next){
  });
 // my create & assiged game
 router.post('/mygame',function(req,res,next){
-  var user_id=req.body.data.user_id;
+   var user_id=parseInt(req.body.data.user_id);
+    var current_utc=Math.floor(new Date()/ 1000);
+  // console.log(user_id);
   var type=req.body.data.type;
   if (user_id) {
          if(type=="created")
          {
-           Game.find({creator_id:user_id} ).sort({g_prize:-1}).then(function(gamedata){
-             if (gamedata.length>0) {
+
+           Game. aggregate([{
+      $lookup: {
+         from: "users",
+         localField: "creator_id",    // field in the orders collection
+         foreignField: "user_id",  // field in the items collection
+         as: "user"
+      },
+
+   },
+
+   { $match:{creator_id:user_id,time_utc:{$gte: current_utc}}}, { $project: {question:1,creator_id:1,game_code:1,g_status:1,g_name:1,g_fee:1,time:1,time_utc:1,g_type:1,g_code:1,
+        g_prize:1,topics:{_id:1,t_name:-1,img:1},player:{user_id:-1,name:-1,pic:-1},user:{name:1,pic:1}} }]).then(function(gamedata){
+             if (gamedata) {
+				 
                  res.send({"status":true,"code":200,"message":"Game Found","data":gamedata});
              }else {
                  res.send({"status":false,"code":404,"message":"No Game Created yet , Create it"});
@@ -767,8 +793,20 @@ router.post('/mygame',function(req,res,next){
          } else if(type=="invite")
          {
            // game played by me
-           Game.find({"player.user_id":user_id} ).sort({time_utc:-1}).then(function(gamedata){
-             if (gamedata.length>0) {
+		       Game. aggregate([{
+      $lookup: {
+         from: "users",
+         localField: "creator_id",    // field in the orders collection
+         foreignField: "user_id",  // field in the items collection
+         as: "user"
+      },
+
+   },
+
+   { $match:{"player.user_id":user_id,time_utc:{$gte: current_utc}}}, { $project: {question:1,creator_id:1,game_code:1,g_status:1,g_name:1,g_fee:1,time:1,time_utc:1,g_type:1,g_code:1,
+        g_prize:1,topics:{_id:1,t_name:-1,img:1},player:{user_id:-1,name:-1,pic:-1},user:{name:1,pic:1}} }]).then(function(gamedata){
+           
+             if (gamedata) {
                  res.send({"status":true,"code":200,"message":"Game Found","data":gamedata});
              }else {
                  res.send({"status":false,"code":404,"message":"Take part on games"});
@@ -830,15 +868,252 @@ router.post('/submitscore',function(req,res,next){
 	var game_id=parseInt(req.body.game_id);
 	var user_id=parseInt(req.body.user_id);
 	  if (game_id && user_id) {
-			var current_utc=Math.floor(new Date()/ 1000); 
-			 res.send({"status":false,"code":200,"message":"Score Sumiited"});
+			var current_utc=Math.floor(new Date()/ 1000);
+            Game.findOne({_id:game_id,"player.user_id":user_id} ).select({_id:-1}).then(function(gamedata){
+						
+				if(gamedata)
+				{
+					GameScore.findOne({game_id:game_id,user_id:user_id}).then(function(scoredata){
+						 if(scoredata)
+						 {
+							   res.send({"status":false,"code":404,"message":"Score is Already Updated"});
+						 }
+						 else
+						 {
+							// add new entry 
+								GameScore.create(req.body).then(function(newscore){
+							  // when user registration done
+							  // create user refferal code
+							  res.send({"status":true,"code":200,"message":"Score Update Successfully"});
+
+							}).catch(next);
+						 }
+						 
+					 });
+					
+				}
+				else
+				{
+					  res.send({"status":false,"code":404,"message":"You have to be player of game"});
+				}
+			});
+			 
 	  }
 	    else {
         res.send({"status":false,"code":404,"message":"Required Paramter missing"});
     }   
 });
-router.post('/gameresult',function(req,res,next){       
-  res.send({"status":false,"code":404,"message":"Result Declare"});
+router.post('/test',function(req,res,next){   
+ Game.updateOne(   
+									   {_id:10},
+									   { $set:{winner_assign:"y"}},      
+									   
+										function(err, result){
+                   if (err) {
+                        res.send({"status":false,"code":404,"message":"failed"});
+                   }
+                   if (result) {   
+                        res.send({"status":true,"code":200,"message":"done"});
+                   }else {
+                         res.send({"status":false,"code":404,"message":"Required Paramter missing"});
+					}}
+				)
+});
+router.post('/gameresult',function(req,res,next){          
+    var game_id=parseInt(req.body.game_id);
+	var user_id=parseInt(req.body.user_id);
+	  if (game_id && user_id) {
+		 Game.findOne({_id:game_id}).select({_id:-1,g_prize:-1,player:-1,winner_assign:-1}).then(function(gamedata){
+			 if(gamedata)
+			 {
+				 
+				var game_prize=gamedata.g_prize;
+				 var winner_assign=gamedata.winner_assign;
+				
+				 if(winner_assign=="y")
+				 {
+					// console.log('here');
+					 // list winner data
+					 GameScore. aggregate([{   
+									  $lookup: {
+										 from: "users",
+										 localField: "user_id",    // field in the orders collection
+										 foreignField: "user_id",  // field in the items collection
+										 as: "user"
+									  }   
+								   },
+									{ $match: {game_id:game_id,is_winner:'y'}}, { $project:{user_id:1,time:1,right_ans:1,
+								
+									user:{name:1,pic:1,fcm_id:1}} }]).sort({time:1}).then(function(scoredata){ 
+										 if(scoredata)
+										 {   
+											 
+											var winner_count=scoredata.length;
+											var winning_amount=parseInt(game_prize/winner_count);
+											
+													res.send({"status":true,"code":200,"message":"Winner List","data":scoredata,"winner_count":winner_count,"amount":winning_amount,"rank":1});       
+											      
+												
+										 }       
+										 else
+										 {
+											res.send({"status":false,"code":404,"message":"Something Went Wrong"});	 
+										 }
+										
+								});
+				 }
+				 else
+				 {
+					 //console.log('there');
+					 // create new winner
+					 GameScore.aggregate(
+				   [
+					{
+						$match:{game_id:game_id}
+					 },
+					 {
+					   $group:
+						 {
+						   _id: "$game_id",
+						   maxScore: { $max: "$right_ans" }
+						 }
+					 }   
+					 ]  
+				).then(function(gamescore){
+				
+					if(gamescore)
+					{    
+						if(gamescore[0])
+						{
+							var player_data=gamedata.player;
+							var player_count=player_data.length;
+							var maxScore=gamescore[0].maxScore;
+							 
+							 if(player_data)
+							 {
+								
+								GameScore. aggregate([{   
+									  $lookup: {
+										 from: "users",
+										 localField: "user_id",    // field in the orders collection
+										 foreignField: "user_id",  // field in the items collection
+										 as: "user"
+									  }   
+								   },
+									{ $match: {game_id:game_id,right_ans:maxScore}}, { $project:{user_id:1,time:1,right_ans:1,user:{name:1,pic:1,fcm_id:1}} }]).sort({time:1}).then(function(scoredata){ 
+										 if(scoredata)
+										 {
+											var winner_count=scoredata.length;
+											var winning_amount=parseInt(game_prize/winner_count);
+											extrafunction.winnerassign(player_data,scoredata,winning_amount,game_id,function(wdata){   
+												 console.log(wdata);
+													res.send({"status":true,"code":200,"message":"Winner List","data":scoredata,"winner_count":winner_count,"amount":winning_amount,"rank":1});       
+											});         
+												
+										 }
+										 else
+										 {
+											res.send({"status":false,"code":404,"message":"Something Went Wrong"});	 
+										 }
+										
+								});
+							 }
+							 else
+							 {
+								res.send({"status":false,"code":404,"message":"For Result Declare at least has to one player"}); 
+							 }
+						}   
+						else
+						{
+							 res.send({"status":false,"code":404,"message":"No Entry in game score table"});	
+						}
+						
+							
+						
+					}
+					else
+					{
+					   res.send({"status":false,"code":404,"message":"Before Score Submission cant able to declare game"});	
+					}
+				});
+				 }
+				 
+			 }
+			 else
+			 {
+				 res.send({"status":false,"code":404,"message":"Invalid Game id"}); 
+			 }
+		  
+		 });
+	  }
+	  else {
+        res.send({"status":false,"code":404,"message":"Required Paramter missing"});
+    }  
+});
+router.post('/coinhistory',function(req,res,next){
+  var type=req.body.req_type;
+	var user_id=parseInt(req.body.user_id);
+	console.log(req.body);
+	var s_array=[];
+	if(user_id)
+	{
+		 if(type=="redeem")
+		 {
+			 var msg=[{"msg":"redeem 25 coin","coin":25,"status":1},{"msg":"redeem 25 coin","coin":25,"status":2}];
+					 res.send({"status":true,"code":200,"message":"Score Data","data":msg}); 
+			 // redeem history
+		 } else if(type=="winning")
+		 {
+			// winning history
+             GameScore.find({user_id:user_id,is_winner:"y"}).select({_id:-1,t_name:-1,img:-1}).sort({submit_time:1}).then(function(scoredata){
+				 if(scoredata)
+				 {
+					var msg=[{"msg":"won 25 coin","coin":25}];
+					 res.send({"status":true,"code":200,"message":"Score Data","data":msg}); 
+				 }
+				 else
+				 {
+					 res.send({"status":false,"code":404,"message":"No Score data"}); 
+				 }
+			 });				 
+		 }
+		 else
+		 {
+			 res.send({"status":false,"code":404,"message":"Selct Proper type value"});
+		 }
+	}
+	else
+	{
+		res.send({"status":false,"code":404,"message":"Required Paramter missing"});
+	}
+});
+router.post('/redeemcoin',function(req,res,next){   
+	var user_id=parseInt(req.body.user_id);
+	var coin=parseInt(req.body.coin);
+	if(coin>30)
+	{
+		if(coin>100)
+		{
+			res.send({"status":false,"code":404,"message":"Cant able to withdraw coin more than 100 at once"});
+		}
+		else
+		{
+			// redeem coin 
+			 res.send({"status":true,"code":200,"message":"Request Submiited"}); 
+		}
+	}
+	else
+	{
+		res.send({"status":false,"code":404,"message":"To Redeem At least you need to have 30 coin"});
+	}
+});
+router.post('/inapp',function(req,res,next){   
+ res.send({
+    "status": true,
+    "code": 200,
+    "message": "Inapp Done Successfully",
+    "show_ads": "n"
+}); 
 });
 
 module.exports=router;

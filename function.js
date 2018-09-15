@@ -2,6 +2,8 @@ const User=require('./Model/usermodel');
 const question=require('./Model/questionmodel');
 const Game=require('./Model/gamemodel');
   const QuestionModel=require('./Model/questionmodel');
+  const GameScore=require('./Model/scoremodel');
+ var extrafunction = require('./function.js');
 var methods = {};
 var result;
 methods.generateRefferalcode = function(user_name,callback) {
@@ -80,7 +82,7 @@ var question_ids=[1,2,3];
    //callback(ref_code);
 };  
 methods.gamedetail = function(game_id,user_id,callback) {
-	console.log(game_id);
+	//console.log(game_id);
 	self_stauts=0;
 	 Game. aggregate([{
       $lookup: {
@@ -209,6 +211,120 @@ methods.playercheck = function(player_list,user_id,creator_id,callback) {
    
 	callback(self_stauts);   
 };
+// assign winner of game 
+methods.winnerassign = function(player_list,scoredata,winning_amount,game_id,callback) {
+	 var player_array =[];
+	 var s_array=[];
+	 var length = player_list.length;
+	 console.log(scoredata);
+	 if(length>0)
+	 {
+		  player_list.forEach(function(singleplayer) {
+			player_array.push(singleplayer.user_id);
+        });
+		scoredata.forEach(function(splayer) {
+			s_array.push(splayer.user_id);
+        });  
+		console.log(s_array);   
+		User.find({user_id:{$in:player_array}}).select({user_id:-1,fcm_id:-1}).then(function(userdata){
+			if(userdata)
+			{
+				// update winner 
+				
+				GameScore.updateMany(   
+				   {user_id:{$in:s_array},game_id:game_id},
+				   { $set: {is_winner:"y",winning_amout:winning_amount} },  
+				   
+					function(err, result){
+                   if (err) {
+                     callback(false);
+                   }
+                   if (result) {
+                             Game.updateOne(   
+									   {_id:game_id},
+									   { $set:{winner_assign:"y"}},      
+									   
+										function(err, result){
+									   if (err) {
+											callback(false);
+									   }      
+									   if (result) {
+											// update game status    
+											    var winmsg={
+														   title: 'You won',
+														   body: 'You win '+winning_amount+'coin ,check Now!!'
+														  
+														 };
+														var winmsgdata={
+															   title: 'You won',
+																body: 'You win '+winning_amount+'coin ,check Now!!',
+															   game_id:game_id,
+															   type:"openresult"
+															 };
+													  var resmsg={
+														   title: 'Result Declare',
+														   body: 'Result for current playing is declare,check Now!!'
+														  
+														 };
+														var resmsgdata={
+															   title: 'You won',
+																body: 'You win '+winning_amount+'coin ,check Now!!',
+															   game_id:game_id,
+															   type:"openresult"
+															 };
+												 userdata.forEach(function(singleuser) {
+													 var s_user_id=singleuser.user_id;   
+													 var s_fcm_id=singleuser.fcm_id;   
+													 if(s_array.includes(s_user_id))
+													 { 
+														
+													//update user wallet 
+													    exports.updatecoin(s_user_id,function (updatejoin) {
+															exports.sendnoti(winmsg,winmsgdata,s_fcm_id,function (json) {
+															
+														});
+														});
+														
+														 
+														   
+													 }      
+													 else
+													 {      
+														exports.sendnoti(resmsg,resmsgdata,s_fcm_id,function (json) {
+															
+														});
+														  
+													 }      
+												 });
+												 callback(true);
+											
+									   }else {
+											callback(false);
+										}}
+									)					   
+                        
+						
+                   }else {
+                       callback(false);
+                   }
+                  }
+				);   
+				
+			}
+			else
+			{
+				callback(false);
+			}
+		});
+		
+	 }
+	 else
+	 {
+		 callback(false);
+	 }
+	 
+	 
+};
 // send push  notification
 methods.sendpush = function(msg,msgdata,register_ids,callback) {
   var admin = require('firebase-admin');
@@ -254,6 +370,51 @@ admin.messaging().send(message)
 
 
 };
+exports.updatecoin=function(user_id,callback){
+	console.log('coin updated');
+};   
+exports.sendnoti = function(msg,msgdata,register_ids,callback) {
+      var admin = require('firebase-admin');
 
+var serviceAccount = require('./config/quiz-king-ce809-bc1c6ad40b49.json');
+try {
+admin.initializeApp({
+credential: admin.credential.cert(serviceAccount),
+databaseURL: 'https://quiz-king-ce809.firebaseio.com/'
+});
+}
+catch (err) {
+   console.error('Firebase initialization error', err.stack)
+}
+// This registration token comes from the client FCM SDKs.
+var registrationToken = register_ids;
+var msgdata = JSON.stringify(msgdata);
+var msgd={"title":msg.title,"body":msg.body,data:msgdata};
+// See documentation on defining a message payload.
+var message = {
+  data:msgd,
+  android: {
+   ttl: 3600 * 1000, // 1 hour in milliseconds
+   priority: 'normal',
+   notification:msg
+ },  
+  notification:msg,
+  token: registrationToken
+};
+
+// Send a message to the device corresponding to the provided
+// registration token.
+admin.messaging().send(message)
+  .then((response) => {
+    // Response is a message ID string.
+      callback(response);
+    console.log('Successfully sent message:', response);       
+  })
+  .catch((error) => {
+      callback(error);
+    console.log('Error sending message:error:',error);
+  });
+
+}
 
 module.exports = methods;
